@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #020b18;
+    --bg-sidebar: #061326;
+    --bg-panel: #0a1729;
+    --bg-panel-secondary: #0d1d32;
+    --border-subtle: #1d3552;
+    --accent-green: #00d084;
+    --accent-neon: #20e39a;
+    --accent-blue: #24a8ff;
+    --accent-red: #ef4444;
+    --accent-orange: #f59e0b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+  }
+
+  html,
+  body {
+    background-color: #020b18;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #061326;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d3552;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b4c73;
+}
+
+/* Leaflet dark overrides */
+.leaflet-container {
+  background: #041022 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(10, 23, 41, 0.96) !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #1d3552 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-popup-tip {
+  background: #0a1729 !important;
+  border: 1px solid #1d3552 !important;
+}
+
+.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #f1f5f9 !important;
+}
+
+.sertos-route-glow {
+  filter: drop-shadow(0 0 8px rgba(36, 168, 255, 0.75));
+}
+
+@keyframes subtle-cctv-scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(400%);
+  }
+}
+
+.cctv-scanline {
+  animation: subtle-cctv-scan 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cctv-scanline {
+    animation: none;
+  }
+}

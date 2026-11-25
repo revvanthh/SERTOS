@@ -1,0 +1,6 @@
+{
+  "name": "SERTOS — Bengaluru Traffic Police Control",
+  "description": "Smart Emergency Response & Traffic Optimization System (SERTOS) operational dashboard for Bengaluru Traffic Police emergency corridor coordination, signal simulation, ambulance tracking, and CSV reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
